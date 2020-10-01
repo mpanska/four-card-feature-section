@@ -1,0 +1,33 @@
+.heading{
+    text-align: center;
+    margin-top: 85px;
+    margin-bottom: 60px;
+     
+    #regular{
+        font-weight: 200;
+        @include breakpoint-down(medium){
+            font-size: 25px;
+            margin-bottom: 0;
+        }
+    }
+
+    #bold{
+        @include breakpoint-down(medium){
+            font-size: 25px;
+            margin-top: 0;
+        }
+    }
+
+    p{
+        @include breakpoint-down(medium){
+            margin-left: 38px;
+            margin-right: 38px;
+            margin-bottom: 77px;
+        }
+    }
+
+    @include breakpoint-down(medium){
+        margin-top: 90px;
+    }
+
+}

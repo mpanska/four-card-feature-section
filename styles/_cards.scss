@@ -1,0 +1,80 @@
+//TODO: fix firs card width on 578 size
+
+.cards{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    margin-right: 100px;
+    margin-left: 100px;
+  
+    @include breakpoint-down(small){
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    @include breakpoint-down(medium){
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item{
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: -1px 11px 21px -6px rgba(110,110,110,0.16);
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 27px;
+
+      
+        &#supervisor{
+            @include breakpoint-up(large){
+                position: relative;
+                top: 140px;
+            }
+            &::before{
+                @include line($cyan);
+            }
+        }
+
+        &#builder{
+            &::before{
+                @include line($red);
+            }
+        }
+
+        &#calculator{
+            @include breakpoint-up(large){
+                position: relative;
+                top: 140px;
+            }
+            &::before{
+                @include line($blue);
+            }
+        }
+
+        &#karma{
+            &::before{
+                @include line($orange);
+            }
+        }     
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 30px;
+        
+        img{
+            align-self: flex-end;
+            margin-top: 20px;
+        }
+    }
+
+    .central-wrap{
+        display: grid;
+    }
+   
+}
