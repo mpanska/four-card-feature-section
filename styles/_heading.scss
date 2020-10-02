@@ -19,6 +19,9 @@
     }
 
     p{
+        margin-left: 465px;
+        margin-right: 465px;
+
         @include breakpoint-down(medium){
             margin-left: 38px;
             margin-right: 38px;
